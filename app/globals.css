@@ -1,0 +1,29 @@
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif; /* default to geist font */
+}
+
+code {
+  font-family: var(--font-geist-mono), monospace; /* apply mono font to code */
+}
+
+/* You can also extend additional customizations if necessary */
