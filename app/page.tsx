@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Head from "next/head"; // Add this import to use the Head component
-// @ts-ignore
-import { MailIcon } from "@heroicons/react/solid";
+
+import { MdMail } from 'react-icons/md';
 import { BsLinkedin } from "react-icons/bs"; 
 
 export default function Home() {
@@ -37,13 +37,13 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold mb-4">Siddalingappa K</h1>
           <p className="text-xl font-medium text-gray-400 mb-6">Java Full Stack Developer</p>
           <div className="flex justify-center space-x-6 mb-6">
-            <a 
-              href="mailto:siddalinga1729@gmail.com" 
-              className="hover:text-yellow-400 text-xl flex items-center space-x-2 transform transition-all hover:scale-110"
-            >
-              <MailIcon className="w-6 h-6 text-yellow-400 transform transition-all hover:scale-110" />
-              <span>Email</span>
-            </a>
+          <a
+  href="mailto:siddalinga1729@gmail.com"
+  className="hover:text-yellow-400 text-xl flex items-center space-x-2 transform transition-all hover:scale-110"
+>
+  <MdMail className="w-6 h-6 text-yellow-400 transform transition-all hover:scale-110" />
+  <span>Email</span>
+</a>
             <a
               href="https://linkedin.com/in/sidda-linga-842a781b8"
               target="_blank"
