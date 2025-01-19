@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { useState, useEffect } from 'react';
-import { MdMail, MdEmail } from 'react-icons/md';
+import { MdMail, MdEmail, MdOutlineDescription } from 'react-icons/md';
 import { BsLinkedin, BsGithub, BsTelephone } from "react-icons/bs";
-import { FaUserTie } from "react-icons/fa";
+
+
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -80,48 +81,48 @@ export default function Home() {
 
         {/* Main Content - reduced padding */}
         <div className="container mx-auto max-w-4xl px-3 pt-20">
-          {/* Floating Action Buttons - moved to middle right */}
-          <div className="fixed top-1/2 -translate-y-1/2 right-4 md:right-10 space-y-3 md:space-y-4 z-20">
+          {/* Floating Action Buttons - consistent styling */}
+          <div className="fixed top-1/2 -translate-y-1/2 right-2 md:right-10 space-y-2 md:space-y-4 z-20">
             <button
               onClick={() => window.open("/Siddalingappa-Fullstackdeveloper.pdf", "_blank")}
-              className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-blue-500/50 transform transition-all hover:scale-110 text-lg md:text-xl flex items-center gap-2"
+              className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white p-2 md:p-4 rounded-full shadow-lg hover:shadow-blue-500/50 transform transition-all hover:scale-110 flex items-center gap-2"
               title="View Resume"
             >
-              <FaUserTie className="w-5 h-5 md:w-6 md:h-6"/>
-              <span className="absolute right-full mr-2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <MdOutlineDescription className="w-4 h-4 md:w-6 md:h-6"/>
+              <span className="absolute right-full mr-2 bg-gray-900 text-white px-2 py-1 rounded-lg text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                 View Resume
               </span>
             </button>
             
             <button
               onClick={() => window.open('https://www.linkedin.com/in/siddalingappa-k/', '_blank')}
-              className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 rounded-full shadow-lg hover:shadow-blue-600/50 transform transition-all hover:scale-110 text-xl flex items-center gap-2"
+              className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white p-2 md:p-4 rounded-full shadow-lg hover:shadow-blue-600/50 transform transition-all hover:scale-110 flex items-center gap-2"
               title="Connect on LinkedIn"
             >
-              <BsLinkedin className="w-6 h-6"/>
-              <span className="absolute right-full mr-2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <BsLinkedin className="w-4 h-4 md:w-6 md:h-6"/>
+              <span className="absolute right-full mr-2 bg-gray-900 text-white px-2 py-1 rounded-lg text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                 LinkedIn Profile
               </span>
             </button>
 
             <button
               onClick={() => window.open('mailto:siddalinga1729@gmail.com')}
-              className="group bg-gradient-to-r from-red-500 to-red-600 text-white p-4 rounded-full shadow-lg hover:shadow-red-500/50 transform transition-all hover:scale-110 text-xl flex items-center gap-2"
+              className="group bg-gradient-to-r from-red-500 to-red-600 text-white p-2 md:p-4 rounded-full shadow-lg hover:shadow-red-500/50 transform transition-all hover:scale-110 flex items-center gap-2"
               title="Send Email"
             >
-              <MdEmail className="w-6 h-6"/>
-              <span className="absolute right-full mr-2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <MdEmail className="w-4 h-4 md:w-6 md:h-6"/>
+              <span className="absolute right-full mr-2 bg-gray-900 text-white px-2 py-1 rounded-lg text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                 Send Email
               </span>
             </button>
 
             <button
               onClick={() => window.open('https://github.com/siddalinga1729', '_blank')}
-              className="group bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4 rounded-full shadow-lg hover:shadow-gray-700/50 transform transition-all hover:scale-110 text-xl flex items-center gap-2"
+              className="group bg-gradient-to-r from-gray-700 to-gray-900 text-white p-2 md:p-4 rounded-full shadow-lg hover:shadow-gray-700/50 transform transition-all hover:scale-110 flex items-center gap-2"
               title="View GitHub Profile"
             >
-              <BsGithub className="w-6 h-6"/>
-              <span className="absolute right-full mr-2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <BsGithub className="w-4 h-4 md:w-6 md:h-6"/>
+              <span className="absolute right-full mr-2 bg-gray-900 text-white px-2 py-1 rounded-lg text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                 GitHub Profile
               </span>
             </button>
@@ -153,11 +154,11 @@ export default function Home() {
             </div>
             
             {/* Name and Title */}
-            <div className="relative z-20 mt-6">
-              <h1 className="text-5xl font-bold text-white mb-3">
+            <div className="relative z-20 mt-6 md:pr-16">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
                 Siddalingappa K
               </h1>
-              <p className="text-2xl font-medium text-blue-400 mb-4">
+              <p className="text-xl md:text-2xl font-medium text-blue-400 mb-4">
                 Java Full Stack Developer
               </p>
             </div>
