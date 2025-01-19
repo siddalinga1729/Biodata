@@ -47,14 +47,14 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-gray-900 text-white min-h-screen p-6 font-sans relative">
-        {/* Updated Navbar */}
-        <nav className="backdrop-blur-md bg-gray-800/90 text-white fixed top-0 left-0 right-0 p-4 z-50 border-b border-gray-700">
-          <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+      <div className="bg-gray-900 text-white min-h-screen p-4 font-sans relative">
+        {/* Updated Navbar - reduced padding */}
+        <nav className="backdrop-blur-md bg-gray-800/90 text-white fixed top-0 left-0 right-0 p-3 z-50 border-b border-gray-700">
+          <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center gap-3">
             <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent text-center md:text-left">
               Siddalingappa K
             </h1>
-            <ul className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm md:text-base">
+            <ul className="flex flex-wrap justify-center gap-3 md:gap-5 text-sm md:text-base">
               {[
                 { id: "summary", label: "Summary" },
                 { id: "experience", label: "Experience" },
@@ -78,12 +78,12 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* Main Content - Add padding to account for fixed navbar */}
-        <div className="container mx-auto max-w-4xl px-4 pt-24">
+        {/* Main Content - reduced padding */}
+        <div className="container mx-auto max-w-4xl px-3 pt-20">
           {/* Floating Action Buttons - moved to middle right */}
           <div className="fixed top-1/2 -translate-y-1/2 right-4 md:right-10 space-y-3 md:space-y-4 z-20">
             <button
-              onClick={() => window.open("/resume.pdf", "_blank")}
+              onClick={() => window.open("/Siddalingappa-Fullstackdeveloper.pdf", "_blank")}
               className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-blue-500/50 transform transition-all hover:scale-110 text-lg md:text-xl flex items-center gap-2"
               title="View Resume"
             >
@@ -116,7 +116,7 @@ export default function Home() {
             </button>
 
             <button
-              onClick={() => window.open('https://github.com/YourGitHubUsername', '_blank')}
+              onClick={() => window.open('https://github.com/siddalinga1729', '_blank')}
               className="group bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4 rounded-full shadow-lg hover:shadow-gray-700/50 transform transition-all hover:scale-110 text-xl flex items-center gap-2"
               title="View GitHub Profile"
             >
@@ -127,8 +127,8 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Header Section with Profile Image */}
-          <header id="header" className="mt-12 text-center mb-12 pb-8 bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
+          {/* Header Section - reduced margins and padding */}
+          <header id="header" className="mt-8 text-center mb-8 pb-6 bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-4 shadow-2xl relative overflow-hidden">
             {/* Profile Image Container */}
             <div className="relative w-44 h-44 mx-auto mb-4">
               {/* Glowing effect behind image */}
@@ -166,6 +166,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mt-6">
               <div className="flex items-center justify-center gap-2 p-2 hover:bg-gray-800/50 rounded-lg transition-colors">
                 <MdMail className="text-blue-400 w-5 h-5" />
+                <span className="text-gray-400">Email:</span>
                 <a href="mailto:siddalinga1729@gmail.com" 
                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm md:text-base">
                   siddalinga1729@gmail.com
@@ -173,9 +174,10 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-center gap-2 relative group p-2 hover:bg-gray-800/50 rounded-lg transition-colors">
                 <BsTelephone className="text-blue-400 w-5 h-5" />
+                <span className="text-gray-400">Phone:</span>
                 <a href="tel:+918106595594" 
                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm md:text-base">
-                  Phone: 8106595594
+                  8106595594
                 </a>
                 <button
                   onClick={handlePhoneClick}
@@ -192,17 +194,39 @@ export default function Home() {
                   )}
                 </button>
               </div>
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center justify-center gap-2 p-2 hover:bg-gray-800/50 rounded-lg transition-colors">
                 <svg className="text-blue-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-gray-300">Location: Bangalore</span>
+                <span className="text-gray-400">Location:</span>
+                <span className="text-gray-300">Bangalore</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 p-2 hover:bg-gray-800/50 rounded-lg transition-colors">
+                <svg className="text-blue-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z" clipRule="evenodd" />
+                </svg>
+                <span className="text-gray-400">Nationality:</span>
+                <span className="text-gray-300">Indian</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 p-2 hover:bg-gray-800/50 rounded-lg transition-colors">
+                <svg className="text-blue-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z" clipRule="evenodd" />
+                </svg>
+                <span className="text-gray-400">DOB:</span>
+                <span className="text-gray-300">17/02/1999</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 p-2 hover:bg-gray-800/50 rounded-lg transition-colors">
+                <svg className="text-blue-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
+                </svg>
+                <span className="text-gray-400">Languages:</span>
+                <span className="text-gray-300">English, Kannada, Hindi</span>
               </div>
             </div>
           </header>
 
-          {/* Summary Section */}
-          <section id="summary" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-8 mb-16 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
+          {/* Summary Section - reduced margins and padding */}
+          <section id="summary" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 mb-8 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
               Summary
             </h2>
@@ -215,8 +239,8 @@ export default function Home() {
             </p>
           </section>
 
-          {/* Experience Section */}
-          <section id="experience" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-8 mb-16 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
+          {/* Experience Section - reduced margins and padding */}
+          <section id="experience" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 mb-8 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
               Professional Experience
             </h2>
@@ -274,20 +298,18 @@ export default function Home() {
                     </h3>
                     <span className="text-gray-400">{exp.duration}</span>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <span className="text-gray-400">Designation:</span>
-                        <span className="text-gray-300">{exp.designation}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-gray-400">Experience:</span>
-                        <span className="text-gray-300">{exp.experience}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-gray-400">Location:</span>
-                        <span className="text-gray-300">{exp.location}</span>
-                      </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="text-blue-400">Designation:</span>
+                      <span className="text-gray-300">{exp.designation}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-blue-400">Experience:</span>
+                      <span className="text-gray-300">{exp.experience}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-blue-400">Location:</span>
+                      <span className="text-gray-300">{exp.location}</span>
                     </div>
                   </div>
                 </div>
@@ -295,8 +317,8 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Skills Section */}
-          <section id="skills" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-8 mb-16 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
+          {/* Skills Section - reduced margins and padding */}
+          <section id="skills" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 mb-8 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
               Technical Skills
             </h2>
@@ -342,8 +364,8 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Projects Section */}
-          <section id="projects" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-8 mb-16 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
+          {/* Projects Section - reduced margins and padding */}
+          <section id="projects" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 mb-8 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
               Projects
             </h2>
@@ -414,22 +436,22 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="flex items-center gap-2">
-                        <span className="text-gray-400">Company:</span>
+                        <span className="text-blue-400">Company:</span>
                         <span className="text-gray-300">{project.company}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-gray-400">Team Size:</span>
+                        <span className="text-blue-400">Team Size:</span>
                         <span className="text-gray-300">{project.teamSize}</span>
                       </div>
                       {project.duration && (
                         <div className="flex items-center gap-2">
-                          <span className="text-gray-400">Duration:</span>
+                          <span className="text-blue-400">Duration:</span>
                           <span className="text-gray-300">{project.duration}</span>
                         </div>
                       )}
                       {project.processType && (
                         <div className="flex items-center gap-2">
-                          <span className="text-gray-400">Process:</span>
+                          <span className="text-blue-400">Process:</span>
                           <span className="text-gray-300">{project.processType}</span>
                         </div>
                       )}
@@ -437,7 +459,7 @@ export default function Home() {
                     
                     {project.tools && (
                       <div>
-                        <h4 className="text-gray-400 mb-2">Tools & Technologies:</h4>
+                        <h4 className="text-blue-400 mb-2">Tools & Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {project.tools.map((tool, toolIndex) => (
                             <span key={toolIndex} className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300 hover:bg-blue-500 hover:text-white transition-colors cursor-default">
@@ -449,12 +471,12 @@ export default function Home() {
                     )}
                     
                     <div>
-                      <h4 className="text-gray-400 mb-2">Description:</h4>
+                      <h4 className="text-blue-400 mb-2">Description:</h4>
                       <p className="text-gray-300">{project.description}</p>
                     </div>
 
                     <div>
-                      <h4 className="text-gray-400 mb-2">Key Responsibilities:</h4>
+                      <h4 className="text-blue-400 mb-2">Key Responsibilities:</h4>
                       <ul className="space-y-2">
                         {project.responsibilities.map((resp, respIndex) => (
                           <li key={respIndex} className="flex items-start gap-2">
@@ -470,18 +492,43 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Roles Section */}
-          <section id="roles" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-8 mb-16 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
+          {/* Roles Section - reduced margins and padding */}
+          <section id="roles" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 mb-8 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
               Roles
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 "Installing MySQL database and creating database schema",
                 "Mapping database objects using POJO classes",
                 "Developing web applications using Spring Boot",
                 "Creating Responsive UI using CSS and Bootstrap V5.0",
-                // ... add all responsibilities
+                "Implementing RESTful web services using Spring Boot",
+                "Writing complex SQL queries and stored procedures",
+                "Developing microservices using Spring Cloud",
+                "Implementing security using Spring Security and JWT",
+                "Creating and maintaining CI/CD pipelines",
+                "Unit testing using JUnit and Mockito",
+                "Code review and optimization",
+                "Database design and optimization",
+                "API documentation using Swagger",
+                "Version control using Git and GitHub",
+                "Agile development methodology",
+                "Team collaboration and leadership",
+                "Performance tuning and optimization",
+                "Debugging and troubleshooting",
+                "Integration with third-party services",
+                "Docker containerization",
+                "Kubernetes orchestration",
+                "Frontend development using React.js",
+                "UI/UX design implementation",
+                "Cross-browser compatibility testing",
+                "Mobile-responsive design",
+                "Code deployment and maintenance",
+                "Database backup and recovery",
+                "Server configuration and maintenance",
+                "Application monitoring and logging",
+                "Technical documentation"
               ].map((responsibility, index) => (
                 <div key={index} className="flex items-start gap-3 group">
                   <div className="mt-1.5 w-2 h-2 rounded-full bg-blue-400 group-hover:scale-125 transition-transform"></div>
@@ -492,7 +539,7 @@ export default function Home() {
           </section>
 
           {/* Education Section */}
-          <section id="education" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-8 mb-16 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
+          <section id="education" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 mb-8 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
               Educational Qualification
             </h2>
@@ -504,11 +551,11 @@ export default function Home() {
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-400">University:</span>
+                    <span className="text-blue-400">University:</span>
                     <span className="text-gray-300">Jawaharlal Nehru Technical University</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-400">Achievement:</span>
+                    <span className="text-blue-400">Achievement:</span>
                     <span className="text-gray-300">Completed with Distinction</span>
                   </div>
                   <div className="mt-4 flex items-center gap-2">
@@ -542,7 +589,7 @@ export default function Home() {
           </section>
 
           {/* Personal Section */}
-          <section id="personal" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-8 mb-16 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
+          <section id="personal" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 mb-8 shadow-2xl border-l-4 border-blue-500 transition-all duration-300 hover:shadow-blue-500/10 hover:border-l-8">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
               Personal Details
             </h2>
