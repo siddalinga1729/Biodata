@@ -1,10 +1,8 @@
 "use client"; // Mark the file as a Client Component
 
 import Image from "next/image";
-import Head from "next/head"; // Add this import to use the Head component
 import { useState, useEffect } from 'react';
-
-import { MdMail, MdRemoveRedEye, MdFileDownload, MdEmail, MdWork } from 'react-icons/md';
+import { MdMail, MdEmail } from 'react-icons/md';
 import { BsLinkedin, BsGithub, BsTelephone } from "react-icons/bs";
 import { FaUserTie } from "react-icons/fa";
 
@@ -49,9 +47,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <link rel="icon" href="/dev.avif" />
-      </Head>
       <div className="bg-gray-900 text-white min-h-screen p-6 font-sans relative">
         {/* Updated Navbar */}
         <nav className="backdrop-blur-md bg-gray-800/90 text-white fixed top-0 left-0 right-0 p-4 z-50 border-b border-gray-700">
@@ -184,12 +179,17 @@ export default function Home() {
                 </a>
                 <button
                   onClick={handlePhoneClick}
-                  className="opacity-0 group-hover:opacity-100 ml-2 hover:scale-110 transition-all duration-300 p-2"
+                  className="opacity-0 group-hover:opacity-100 ml-2 hover:scale-110 transition-all duration-300 p-2 relative"
                   title="Copy phone number"
                 >
                   <svg className="w-4 h-4 text-blue-400 hover:text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                   </svg>
+                  {showCopySuccess && (
+                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-green-500 text-white px-2 py-1 rounded text-sm whitespace-nowrap">
+                      Copied!
+                    </span>
+                  )}
                 </button>
               </div>
               <div className="flex items-center justify-center gap-2">
