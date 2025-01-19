@@ -79,8 +79,8 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* Main Content - reduced padding */}
-        <div className="container mx-auto max-w-4xl px-3 pt-20">
+        {/* Main Content - adjust padding to prevent navbar overlap */}
+        <div className="container mx-auto max-w-4xl px-3 pt-28 md:pt-20">  {/* Increased pt (padding-top) for mobile */}
           {/* Floating Action Buttons - consistent styling */}
           <div className="fixed top-1/2 -translate-y-1/2 right-2 md:right-10 space-y-2 md:space-y-4 z-20">
             <button
@@ -128,8 +128,8 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Header Section - reduced margins and padding */}
-          <header id="header" className="mt-8 text-center mb-8 pb-6 bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-4 shadow-2xl relative overflow-hidden">
+          {/* Header Section - adjust margin-top */}
+          <header id="header" className="mt-2 md:mt-8 text-center mb-8 pb-6 bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-4 shadow-2xl relative overflow-hidden">
             {/* Profile Image Container */}
             <div className="relative w-44 h-44 mx-auto mb-4">
               {/* Glowing effect behind image */}
@@ -221,7 +221,7 @@ export default function Home() {
                   <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
                 </svg>
                 <span className="text-gray-400">Languages:</span>
-                <span className="text-gray-300">English,Telugu, Kannada, Hindi</span>
+                <span className="text-gray-300">English, Telugu, Kannada, Hindi</span>
               </div>
             </div>
           </header>
