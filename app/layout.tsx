@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Inter, Poppins, Roboto_Mono } from 'next/font/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,9 +13,33 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-poppins',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  variable: '--font-roboto-mono',
+});
+
 export const metadata: Metadata = {
   title: "Siddalingappa Full Stack Developer",
   description: "Siddalingappa Full Stack Developer",
+  icons: {
+    icon: [
+      {
+        url: '/dev-icon.svg',
+        href: '/dev-icon.svg',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
